@@ -18,14 +18,14 @@ erDiagram
         string email UK
         string phone
     }
+    CUSTOMER ||--o{ ORDER : "placed by (INNER JOIN)"
     ORDER {
         long id PK
         date orderDate
         double totalAmount
         string status
-        long customer_id FK
+        long customer_id FK "Join Key"
     }
-    CUSTOMER ||--o{ ORDER : "places"
 ```
 
 ### Table Definitions
